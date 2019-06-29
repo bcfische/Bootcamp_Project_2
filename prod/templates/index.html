@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!--<title>MCU</title>-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      font: 18px "Helvetica Neue";
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="{{ url_for('static', filename='js/d3.v2.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/timeknots.js') }}"></script>
+  <div class="fluid-row">
+    <div class="span3">
+      <h2>Marvel Cinematic Universe</h2>
+      <br><br>
+      <div id="timeline1" style="width:1000px;"></div>
+    </div>
+  </div>
+  {% for movie in movies %}
+    <div>
+      <h3>{{ movie.title }}</h3>
+    </div>
+  {% endfor %}
+  <script type="text/javascript">
+    var marvelFilms = [
+      { name: "Iron Man", date: "2008-05-02", img: "{{ url_for('static', filename='images/movie_1.jpg') }}" },
+      { name: "The Incredible Hulk", date: "2008-06-13", img: "{{ url_for('static', filename='images/movie_2.jpg') }}" },
+      { name: "Iron Man 2", date: "2010-05-07", img: "{{ url_for('static', filename='images/movie_3.jpg') }}" },
+      { name: "Thor", date: "2011-05-06", img: "{{ url_for('static', filename='images/movie_4.jpg') }}" },
+      { name: "Captain America: The First Avenger", date: "2011-07-22", img: "{{ url_for('static', filename='images/movie_5.jpg') }}" },
+      { name: "The Avengers", date: "2012-05-04", img: "{{ url_for('static', filename='images/movie_6.jpg') }}" },
+      { name: "Iron Man 3", date: "2013-05-03", img: "{{ url_for('static', filename='images/movie_7.jpg') }}" },
+      { name: "Thor: The Dark World", date: "2013-11-08", img: "{{ url_for('static', filename='images/movie_8.jpg') }}" },
+      { name: "Captain America: The Winter Soldier", date: "2014-04-04", img: "{{ url_for('static', filename='images/movie_9.jpg') }}" },
+      { name: "Guardians of the Galaxy", date: "2014-08-01", img: "{{ url_for('static', filename='images/movie_10.jpg') }}" },
+      { name: "Avengers: Age of Ultron", date: "2015-05-01", img: "{{ url_for('static', filename='images/movie_11.jpg') }}" },
+      { name: "Ant-Man", date: "2015-07-17", img: "{{ url_for('static', filename='images/movie_12.jpg') }}" },
+      { name: "Captain America: Civil War", date: "2016-05-16", img: "{{ url_for('static', filename='images/movie_13.jpg') }}" },
+      { name: "Doctor Strange", date: "2016-11-04", img: "{{ url_for('static', filename='images/movie_14.jpg') }}" },
+      { name: "Guardians of the Galaxy Vol. 2", date: "2017-05-05", img: "{{ url_for('static', filename='images/movie_15.jpg') }}" },
+      { name: "Spider-Man: Homecoming", date: "2017-07-07", img: "{{ url_for('static', filename='images/movie_16.jpg') }}" },
+      { name: "Thor: Ragnarok", date: "2017-11-03", img: "{{ url_for('static', filename='images/movie_17.jpg') }}" },
+      { name: "Black Panther", date: "2018-02-16", img: "{{ url_for('static', filename='images/movie_18.jpg') }}" },
+      { name: "Avengers: Infinity War", date: "2018-04-27", img: "{{ url_for('static', filename='images/movie_19.jpg') }}" },
+      { name: "Ant-Man and the Wasp", date: "2018-07-06", img: "{{ url_for('static', filename='images/movie_20.jpg') }}" },
+      { name: "Captain Marvel", date: "2019-03-08", img: "{{ url_for('static', filename='images/movie_21.jpg') }}" },
+      { name: "Avengers: Endgame", date: "2019-04-26", img: "{{ url_for('static', filename='images/movie_22.jpg') }}" }
+    ];
+    TimeKnots.draw("#timeline1", marvelFilms, { dateFormat: "%B %Y", color: "#696", width: 1000, showLabels: true, labelFormat: "%Y" });
+  </script>
+</body>
+
+</html>
