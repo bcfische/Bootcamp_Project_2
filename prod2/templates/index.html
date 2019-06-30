@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!--<title>MCU</title>-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      font: 18px "Helvetica Neue";
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+      margin-left: 20px;
+    }
+    .chart div {
+      font: 10px sans-serif;
+      background-color: steelblue;
+      text-align: right;
+      padding: 3px;
+      margin: 1px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fluid-row">
+    <div class="span3">
+      <h2>Marvel Cinematic Universe</h2>
+      <br><br>
+      <div id="timeline1" style="width:1000px;"></div>
+    </div>
+  </div>
+  <div class="chart"></div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="/static/js/update.js"></script>
+  <script src="/static/js/timeknots.js"></script>
+  <script src="/static/js/init.js"></script>
+</body>
+
+</html>
