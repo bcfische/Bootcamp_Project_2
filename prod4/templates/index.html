@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!--<title>MCU</title>-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      font: 18px "Helvetica Neue";
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+      margin-left: 20px;
+    }
+    .chart {
+      background-color: gold;
+    }
+    .chart rect {
+      fill: steelblue;
+    }
+    .chart .time-inner {
+      fill: white;
+      font: 12px sans-serif;
+      text-anchor: end;
+    }
+    .chart .time-outer {
+      fill: steelblue;
+      font: 12px sans-serif;
+      text-anchor: end;
+    }
+    .chart .name-inner {
+      fill: white;
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+    .chart .name-outer {
+      fill: steelblue;
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fluid-row">
+    <div class="span3">
+      <h2><b>Marvel Cinematic Universe</b></h2>
+      <br><br>
+      <div id="timeline1" style="width:1000px;"></div>
+    </div>
+  </div>
+  <p>Movie Title</p>
+  <svg class="chart"></svg>
+  <br><br>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="/static/js/update.js"></script>
+  <script src="/static/js/timeknots.js"></script>
+  <script src="/static/js/index.js"></script>
+</body>
+
+</html>

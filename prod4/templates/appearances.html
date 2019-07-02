@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="icon" href="data:,">
+  <style>
+    body {
+      font: 18px "Helvetica Neue";
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+      margin-left: 20px;
+    }
+    .chart {
+      background-color: gold;
+    }
+    .chart rect {
+      fill: steelblue;
+    }
+    .chart .time-inner {
+      fill: white;
+      font: 12px sans-serif;
+      text-anchor: end;
+    }
+    .chart .time-outer {
+      fill: steelblue;
+      font: 12px sans-serif;
+      text-anchor: end;
+    }
+    .chart .name-inner {
+      fill: white;
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+    .chart .name-outer {
+      fill: steelblue;
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fluid-row">
+    <div class="span3">
+      <h2><b>Top 10 By Total Number of Appearances</b></h2>
+      <div id="bar" style="height:500px; width:1000px"></div>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="/static/js/appear.js"></script>
+</body>
+
+</html>
