@@ -1,0 +1,42 @@
+@media only screen and (max-width: 500px) {
+    .dropdown {
+        margin-left: 0% !important;
+    }
+    
+  body {
+    background: white;
+  }
+  /* every box is this size */
+  
+  .skyblue {
+    background: deepskyblue;
+  }
+  
+  .box{
+    padding: 10px;
+    background: white;
+    margin-top:50px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:20px;
+    align-content: center;
+  }
+  
+  
+  /* Giving our navbar some padding and a background color */
+  .navbar {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 35px;
+    background: #5D6D7E;
+  }
+  
+  /* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+  .navbar li {
+    display: d-block;
+    padding: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+  }
+}
